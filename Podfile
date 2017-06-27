@@ -7,8 +7,8 @@ target 'SocialNetwork' do
 
   # Pods for SocialNetwork
   pod 'Firebase/Core'
-  pod ‘Firebase/Database’
-  pod ‘Firebase/Auth’
-  pod ‘Firebase/Storage’ 
-
+  pod 'Firebase/Database'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Storage'
+  pod 'FBSDKLoginKit'
 end

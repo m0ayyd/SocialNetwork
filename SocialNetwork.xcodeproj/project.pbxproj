@@ -38,6 +38,7 @@
 		EBFED6B31F029B9B002DCC8D /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		EBFED6B51F029D18002DCC8D /* FancyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyField.swift; sourceTree = "<group>"; };
 		EBFED6B71F029E90002DCC8D /* FancyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyButton.swift; sourceTree = "<group>"; };
+		EBFED6B91F02ADE0002DCC8D /* SocialNetwork.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialNetwork.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +82,7 @@
 		EBFED6961F02828A002DCC8D /* SocialNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				EBFED6B91F02ADE0002DCC8D /* SocialNetwork.entitlements */,
 				EBFED6B01F0299FA002DCC8D /* Util */,
 				EBFED6AB1F0284EF002DCC8D /* Model */,
 				EBFED6AC1F0284F6002DCC8D /* View */,
@@ -175,6 +177,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = Z59CRYWHG5;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
