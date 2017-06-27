@@ -78,15 +78,15 @@
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aCO-x6-pij" customClass="FancyField" customModule="SocialNetwork" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="283" height="24"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="0.87" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R6k-hi-xKx" customClass="FancyField" customModule="SocialNetwork" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="39" width="283" height="24"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="0.87" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NhU-GH-Ltk" customClass="FancyButton" customModule="SocialNetwork" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="78" width="283" height="36"/>
@@ -95,6 +95,9 @@
                                         <state key="normal" title="Sign In">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="trM-rK-FP7"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -118,6 +121,10 @@
                             <constraint firstItem="5ZK-pz-Dyr" firstAttribute="top" secondItem="AZx-hz-uyx" secondAttribute="bottom" constant="40" id="xQA-je-wvF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTF" destination="aCO-x6-pij" id="Tfw-pJ-8zD"/>
+                        <outlet property="passwordTF" destination="R6k-hi-xKx" id="8f5-BA-341"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
