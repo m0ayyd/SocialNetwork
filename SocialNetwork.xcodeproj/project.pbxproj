@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		D38989134F85F78B42FCC961 /* Pods_SocialNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBD2F8194535AC17C42A3B4 /* Pods_SocialNetwork.framework */; };
 		EB29AF9A1F04585000F3FAD1 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29AF991F04585000F3FAD1 /* FeedVC.swift */; };
+		EB29AF9C1F047A2400F3FAD1 /* CiricleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29AF9B1F047A2400F3FAD1 /* CiricleImage.swift */; };
+		EB29EA811F082AF700C94170 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29EA801F082AF700C94170 /* PostCell.swift */; };
+		EB29EA841F08342000C94170 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29EA831F08342000C94170 /* DataService.swift */; };
+		EB29EA861F084ADD00C94170 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29EA851F084ADD00C94170 /* Post.swift */; };
 		EBFED6981F02828A002DCC8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFED6971F02828A002DCC8D /* AppDelegate.swift */; };
 		EBFED69A1F02828A002DCC8D /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFED6991F02828A002DCC8D /* SignInVC.swift */; };
 		EBFED69D1F02828A002DCC8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBFED69B1F02828A002DCC8D /* Main.storyboard */; };
@@ -27,6 +31,10 @@
 		3DBF9472352D365DDADD3B6A /* Pods-SocialNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNetwork.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialNetwork/Pods-SocialNetwork.release.xcconfig"; sourceTree = "<group>"; };
 		3F64810A7B9A15807F835845 /* Pods-SocialNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNetwork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialNetwork/Pods-SocialNetwork.debug.xcconfig"; sourceTree = "<group>"; };
 		EB29AF991F04585000F3FAD1 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		EB29AF9B1F047A2400F3FAD1 /* CiricleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CiricleImage.swift; sourceTree = "<group>"; };
+		EB29EA801F082AF700C94170 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		EB29EA831F08342000C94170 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		EB29EA851F084ADD00C94170 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		EBFED6941F02828A002DCC8D /* SocialNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBFED6971F02828A002DCC8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBFED6991F02828A002DCC8D /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -63,6 +71,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EB29EA821F0833FE00C94170 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EB29EA831F08342000C94170 /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		EBFED68B1F02828A002DCC8D = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +100,7 @@
 		EBFED6961F02828A002DCC8D /* SocialNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				EB29EA821F0833FE00C94170 /* Services */,
 				EBFED6B91F02ADE0002DCC8D /* SocialNetwork.entitlements */,
 				EBFED6B01F0299FA002DCC8D /* Util */,
 				EBFED6AB1F0284EF002DCC8D /* Model */,
@@ -102,6 +119,7 @@
 		EBFED6AB1F0284EF002DCC8D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EB29EA851F084ADD00C94170 /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -113,6 +131,8 @@
 				EBFED6B31F029B9B002DCC8D /* RoundButton.swift */,
 				EBFED6B51F029D18002DCC8D /* FancyField.swift */,
 				EBFED6B71F029E90002DCC8D /* FancyButton.swift */,
+				EB29AF9B1F047A2400F3FAD1 /* CiricleImage.swift */,
+				EB29EA801F082AF700C94170 /* PostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -276,11 +296,15 @@
 				EBFED6B61F029D18002DCC8D /* FancyField.swift in Sources */,
 				EBFED69A1F02828A002DCC8D /* SignInVC.swift in Sources */,
 				EBFED6B41F029B9B002DCC8D /* RoundButton.swift in Sources */,
+				EB29EA861F084ADD00C94170 /* Post.swift in Sources */,
+				EB29AF9C1F047A2400F3FAD1 /* CiricleImage.swift in Sources */,
 				EBFED6B81F029E90002DCC8D /* FancyButton.swift in Sources */,
+				EB29EA841F08342000C94170 /* DataService.swift in Sources */,
 				EB29AF9A1F04585000F3FAD1 /* FeedVC.swift in Sources */,
 				EBFED6981F02828A002DCC8D /* AppDelegate.swift in Sources */,
 				EBFED6AF1F0299A1002DCC8D /* FancyView.swift in Sources */,
 				EBFED6B21F029A28002DCC8D /* Constants.swift in Sources */,
+				EB29EA811F082AF700C94170 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
